@@ -1,13 +1,21 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "myApp",
-  "description": "myApp",
-  "appid": "touristappid",
+  "description": "这是一个小程序脚手架~",
+  "appid": "",
+  "projectname": "one-taro-app-ts",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "postcss": false,
-    "minified": false
+    "minified": false,
+    "newFeature": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "uglifyFileName": false
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "miniprogramRoot": "dist/",
+  "libVersion": "2.6.6",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {}
 }
