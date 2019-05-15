@@ -1,9 +1,9 @@
-import { ComponentType } from "react";
-import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Button, Text } from "@tarojs/components";
-import { observer, inject } from "@tarojs/mobx";
+import { ComponentType } from 'react';
+import Taro, { Component, Config } from '@tarojs/taro';
+import { View, Button, Text } from '@tarojs/components';
+import { observer, inject } from '@tarojs/mobx';
 
-import "./index.less";
+import './index.less';
 
 type PageStateProps = {
   counterStore: {
@@ -18,7 +18,7 @@ interface Index {
   props: PageStateProps;
 }
 
-@inject("counterStore")
+@inject( 'counterStore' )
 @observer
 class Index extends Component {
   /**
@@ -29,22 +29,22 @@ class Index extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: "首页"
+    navigationBarTitleText: '首页',
   };
 
-  componentWillMount() {}
+  componentWillMount () {}
 
-  componentWillReact() {
-    console.log("componentWillReact");
+  componentWillReact () {
+    console.log( 'componentWillReact' );
   }
 
-  componentDidMount() {}
+  componentDidMount () {}
 
-  componentWillUnmount() {}
+  componentWillUnmount () {}
 
-  componentDidShow() {}
+  componentDidShow () {}
 
-  componentDidHide() {}
+  componentDidHide () {}
 
   increment = () => {
     const { counterStore } = this.props;
@@ -61,9 +61,9 @@ class Index extends Component {
     counterStore.incrementAsync();
   };
 
-  render() {
+  render () {
     const {
-      counterStore: { counter }
+      counterStore: { counter },
     } = this.props;
     return (
       <View className="index">
