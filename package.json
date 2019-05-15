@@ -1,10 +1,12 @@
 {
-  "name": "myApp",
+  "name": "one-taro-app-ts",
   "version": "1.0.0",
   "private": true,
-  "description": "myApp",
+  "description": "这是一个小程序模板",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev:weapp",
+    "build": "npm run build:weapp",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
@@ -18,7 +20,7 @@
     "dev:h5": "npm run build:h5 -- --watch",
     "dev:rn": "npm run build:rn -- --watch"
   },
-  "author": "",
+  "author": "Mark",
   "license": "MIT",
   "dependencies": {
     "@tarojs/components": "1.2.26",
