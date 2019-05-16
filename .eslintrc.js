@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 15:06:13
+ * @LastEditTime: 2019-05-16 15:40:50
  */
 module.exports = {
   extends: ["taro"],
@@ -101,6 +101,9 @@ module.exports = {
       "named": "never",
       "asyncArrow": "always"
     }],
+    'use-isnan': "error",
+    'valid-typeof': ["error", { "requireStringLiterals": true }],
+    /////Best Practices
     //分号
     semi: ["error", "always"],
     "semi-spacing": ["error", { before: false, after: true }],

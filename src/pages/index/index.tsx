@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
-* @LastEditTime: 2019-05-16 13:33:55
+* @LastEditTime: 2019-05-16 15:11:58
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
@@ -17,6 +17,7 @@ import './index.less';
 class _page extends Component {
   config = {
     navigationBarTitleText: 'PageDemo',
+    // navigationStyle: 'custom',
     navigationBarBackgroundColor: '#62A8FA',
   };
 
