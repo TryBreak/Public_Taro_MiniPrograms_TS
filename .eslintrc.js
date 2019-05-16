@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 13:53:24
+ * @LastEditTime: 2019-05-16 14:03:11
  */
 module.exports = {
   extends: ["taro"],
@@ -21,10 +21,10 @@ module.exports = {
       { extensions: [".js", ".jsx", ".tsx"] }
     ],
     //强制return
-    'getter-return': 1,
-    'no-await-in-loop': 0,
+    'getter-return': 'error',
+    'no-await-in-loop': 'error',
     //必须使用\n换行
-    "linebreak-style": [2, "unix"],
+    "linebreak-style": ['error', "unix"],
     //使用单引号
     quotes: ["error", "single"],
     //必须使用括号包裹箭头函数的参数
