@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 11:40:53
+ * @LastEditTime: 2019-05-16 13:22:34
  */
 module.exports = {
   extends: ["taro"],
@@ -30,7 +30,11 @@ module.exports = {
     "generator-star-spacing": ["error", { before: false, after: true }],
     "no-debugger": "error",
     //函数空格的问题
-    "space-before-function-paren": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
     //分号
     semi: ["error", "always"],
     "semi-spacing": ["error", { before: false, after: false }],
@@ -59,7 +63,7 @@ module.exports = {
     //jsx中使用单引号
     "jsx-quotes": ["error", "prefer-double"],
     //括号内空格
-    "space-in-parens": ["error", "always"],
+    "space-in-parens": ["error", "never"],
     //禁止使用嵌套的三元表达式
     "no-nested-ternary": "error",
     //禁止混合缩进
