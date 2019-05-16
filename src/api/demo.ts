@@ -1,11 +1,11 @@
 /*
- * @LastEditors: Mark
+* @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:34:47
- * @LastEditTime: 2019-05-16 13:15:54
+* @LastEditTime: 2019-05-16 13:44:27
  */
-import { ajax, baseUrl } from '../utils/http';
+import { ajax, baseUrl } from '@/utils/http';
 
 export const getCommentListByDomainId = (data) => {
   /**
@@ -44,7 +44,7 @@ export const getOderDetail = (data) => {
       });
   });
 
-  function filter (res) {
+  function filter(res) {
     const returnData = res.data;
     //数据处理函数
     const venuesHomeImage = returnData.venuesHomeImage;
