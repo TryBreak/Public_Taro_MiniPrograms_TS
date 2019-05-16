@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 14:03:11
+ * @LastEditTime: 2019-05-16 14:19:18
  */
 module.exports = {
   extends: ["taro"],
@@ -23,25 +23,12 @@ module.exports = {
     //强制return
     'getter-return': 'error',
     'no-await-in-loop': 'error',
+    //条件表达式禁止出现赋值操作
+    'no-cond-assign': "error",
     //必须使用\n换行
     "linebreak-style": ['error', "unix"],
     //使用单引号
     quotes: ["error", "single"],
-    //必须使用括号包裹箭头函数的参数
-    "arrow-parens": ["error", "always"],
-    //强制 generator 函数
-    "generator-star-spacing": ["error", { before: false, after: true }],
-    "no-debugger": "error",
-    //函数空格的问题
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "never",
-      "asyncArrow": "always"
-    }],
-    //分号
-    semi: ["error", "always"],
-    "semi-spacing": ["error", { before: false, after: true }],
-    "semi-style": ["error", "last"],
     //console
     "no-console": [
       "warn",
@@ -59,8 +46,41 @@ module.exports = {
     ],
     //禁用常量表达式
     "no-constant-condition": "error",
+    //正则的控制字符
+    'no-control-regex': "error",
+    "no-debugger": "error",
+    'no-dupe-args': "error",
     //禁止出现重复的键
     "no-dupe-keys": "error",
+    //禁止出现重复的 case 标签
+    'no-duplicate-case': "error",
+    //禁止对 catch 子句的参数重新赋值
+    'no-ex-assign': "error",
+    //禁止不必要的布尔类型转换
+    'no-extra-boolean-cast': "error",
+    //圆括号使用规则
+    'no-extra-parens': ["error", "all", {
+      "ignoreJSX": "all",
+      "conditionalAssign": false,
+      "returnAssign": false,
+      "nestedBinaryExpressions": false,
+    }],
+    //必须使用括号包裹箭头函数的参数
+    "arrow-parens": ["error", "always"],
+    //强制 generator 函数
+    "generator-star-spacing": ["error", { before: false, after: true }],
+    //函数空格的问题
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    //分号
+    semi: ["error", "always"],
+    "semi-spacing": ["error", { before: false, after: true }],
+    "semi-style": ["error", "last"],
+
+
     //禁止导入重复模块
     "no-duplicate-imports": "error",
     //jsx中使用单引号
