@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 14:19:18
+ * @LastEditTime: 2019-05-16 15:06:13
  */
 module.exports = {
   extends: ["taro"],
@@ -64,9 +64,35 @@ module.exports = {
       "conditionalAssign": false,
       "returnAssign": false,
       "nestedBinaryExpressions": false,
+      "enforceForArrowConditionals": false
     }],
+    'no-extra-semi': "error",
+    'no-func-assign': "error",
+    'no-inner-declarations': "error",
     //必须使用括号包裹箭头函数的参数
     "arrow-parens": ["error", "always"],
+    //禁止不规则的空白
+    'no-irregular-whitespace': ["error", {
+      "skipStrings": true,
+      "skipComments": true,
+      "skipTemplates": true,
+      "skipRegExps": true,
+    }],
+    'no-obj-calls': "error",
+    //禁止直接调用 Object.prototypes 的内置属性
+    'no-prototype-builtins': "error",
+    //正则表达式多个空格
+    'no-regex-spaces': "error",
+    //禁用稀疏数组
+    'no-sparse-arrays': "error",
+    //禁止出现令人困惑的多行表达式
+    'no-unexpected-multiline': "error",
+    //警告return后的语句
+    'no-unreachable': 'warn',
+    //控制流语句规范
+    'no-unsafe-finally': "error",
+    //善用感叹号
+    'no-unsafe-negation': "error",
     //强制 generator 函数
     "generator-star-spacing": ["error", { before: false, after: true }],
     //函数空格的问题
@@ -79,8 +105,6 @@ module.exports = {
     semi: ["error", "always"],
     "semi-spacing": ["error", { before: false, after: true }],
     "semi-style": ["error", "last"],
-
-
     //禁止导入重复模块
     "no-duplicate-imports": "error",
     //jsx中使用单引号
