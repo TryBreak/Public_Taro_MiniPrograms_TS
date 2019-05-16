@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 13:53:24
+ * @LastEditTime: 2019-05-16 13:55:13
  */
 module.exports = {
   extends: ["taro"],
@@ -17,7 +17,7 @@ module.exports = {
   },
   rules: {
     "react/jsx-filename-extension": [
-      "error",
+      2,
       { extensions: [".js", ".jsx", ".tsx"] }
     ],
     //强制return
@@ -26,29 +26,29 @@ module.exports = {
     //必须使用\n换行
     "linebreak-style": [2, "unix"],
     //使用单引号
-    quotes: ["error", "single"],
+    quotes: [2, "single"],
     //必须使用括号包裹箭头函数的参数
-    "arrow-parens": ["error", "always"],
+    "arrow-parens": [2, "always"],
     //强制 generator 函数
-    "generator-star-spacing": ["error", { before: false, after: true }],
-    "no-debugger": "error",
+    "generator-star-spacing": [2, { before: false, after: true }],
+    "no-debugger": 2,
     //函数空格的问题
-    "space-before-function-paren": ["error", {
+    "space-before-function-paren": [2, {
       "anonymous": "always",
       "named": "never",
       "asyncArrow": "always"
     }],
     //分号
-    semi: ["error", "always"],
-    "semi-spacing": ["error", { before: false, after: true }],
-    "semi-style": ["error", "last"],
+    semi: [2, "always"],
+    "semi-spacing": [2, { before: false, after: true }],
+    "semi-style": [2, "last"],
     //console
     "no-console": [
-      "warn",
+      1,
       {
         allow: [
-          "warn",
-          "error",
+          1,
+          2,
           "info",
           "group",
           "groupCollapsed",
@@ -58,146 +58,146 @@ module.exports = {
       }
     ],
     //禁用常量表达式
-    "no-constant-condition": "error",
+    "no-constant-condition": 2,
     //禁止出现重复的键
-    "no-dupe-keys": "error",
+    "no-dupe-keys": 2,
     //禁止导入重复模块
-    "no-duplicate-imports": "error",
+    "no-duplicate-imports": 2,
     //jsx中使用单引号
-    "jsx-quotes": ["error", "prefer-double"],
+    "jsx-quotes": [2, "prefer-double"],
     //括号内空格
-    "space-in-parens": ["error", "never"],
+    "space-in-parens": [2, "never"],
     //禁止使用嵌套的三元表达式
-    "no-nested-ternary": "error",
+    "no-nested-ternary": 2,
     //禁止混合缩进
-    "no-mixed-spaces-and-tabs": "error",
+    "no-mixed-spaces-and-tabs": 2,
     //空格缩进
-    indent: ["error", 2, { "SwitchCase": 1 }],
+    indent: [2, 2, { "SwitchCase": 1 }],
     //调用构造函数必须带括号
-    "new-parens": "error",
+    "new-parens": 2,
     //多行注释风格
     // 'multiline-comment-style': ['error', 'starred-block'],
     //this别名
-    "consistent-this": ["error", "_this"],
+    "consistent-this": [2, "_this"],
     //大括号风格
-    "brace-style": "error",
+    "brace-style": 2,
     //拖尾逗号
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": [2, "always-multiline"],
     //正则表达式必须被括起来
-    "wrap-regex": "error",
+    "wrap-regex": 2,
     //不要省地方
-    "arrow-spacing": "error",
+    "arrow-spacing": 2,
     //标记无效或缺失的 super() 调用
-    "constructor-super": "error",
+    "constructor-super": 2,
     //操作符和箭头函数混用
-    "no-confusing-arrow": "error",
+    "no-confusing-arrow": 2,
     //九年制调用 super() 之前使用 this 或 super
-    "no-this-before-super": "error",
+    "no-this-before-super": 2,
     //不要玩花
-    "no-useless-computed-key": "error",
+    "no-useless-computed-key": 2,
     //避免新手问题
-    "no-new-symbol": "error",
+    "no-new-symbol": 2,
     //不要使用var
-    "no-var": "error",
+    "no-var": 2,
     //简写
-    "object-shorthand": "error",
+    "object-shorthand": 2,
     //必须要有 yield
-    "require-yield": "error",
+    "require-yield": 2,
     //不要省地方
-    "rest-spread-spacing": ["error", "never"],
+    "rest-spread-spacing": [2, "never"],
     //不要省括号
-    curly: "error",
+    curly: 2,
     //switch
-    "default-case": "error",
+    "default-case": 2,
     //点点和操作符
-    "dot-location": ["error", "property"],
+    "dot-location": [2, "property"],
     //恒等号
-    eqeqeq: ["error", "always"],
+    eqeqeq: [2, "always"],
     //for-in 中必须判断
-    "guard-for-in": "error",
+    "guard-for-in": 2,
     //alert
     // 'no-alert': 'error',
-    "no-caller": "error",
+    "no-caller": 2,
     //switch 词法声明
-    "no-case-declarations": "error",
+    "no-case-declarations": 2,
     //消除正则则表达式歧义
-    "no-div-regex": "error",
+    "no-div-regex": 2,
     //结构不能为空
-    "no-empty-pattern": "error",
+    "no-empty-pattern": 2,
     //禁止 null 比较
-    "no-eq-null": "error",
+    "no-eq-null": 2,
     //禁止 eval
-    "no-eval": "error",
+    "no-eval": 2,
     //禁止扩展原生类型
-    "no-extend-native": "error",
+    "no-extend-native": 2,
     //禁止不必要的标签
-    "no-extra-label": "error",
+    "no-extra-label": 2,
     //switch
-    "no-fallthrough": "error",
+    "no-fallthrough": 2,
     //金庸浮点小数
-    "no-floating-decimal": "error",
+    "no-floating-decimal": 2,
     //禁止改变原生对象的值
-    "no-global-assign": "error",
+    "no-global-assign": 2,
     //禁止使用短符号进行类型转换
-    "no-implicit-coercion": "error",
+    "no-implicit-coercion": 2,
     //禁止在全局范围使用变量和函数声明
-    "no-implicit-globals": "error",
+    "no-implicit-globals": 2,
     //禁用迭代器
-    "no-iterator": "error",
-    "no-labels": "error",
-    "no-lone-blocks": "error",
-    "no-loop-func": "error",
+    "no-iterator": 2,
+    "no-labels": 2,
+    "no-lone-blocks": 2,
+    "no-loop-func": 2,
     //多空格问题
-    "no-multi-spaces": "error",
+    "no-multi-spaces": 2,
     //多行字符串
-    "no-multi-str": "error",
-    "no-new": "error",
+    "no-multi-str": 2,
+    "no-new": 2,
     //禁用Function构造函数
-    "no-new-func": "error",
+    "no-new-func": 2,
     //禁止原始包装实例
-    "no-new-wrappers": "error",
+    "no-new-wrappers": 2,
     //禁用八进制字面量
-    "no-octal": "error",
+    "no-octal": 2,
     //禁止对函数参数再赋值
-    "no-param-reassign": "error",
+    "no-param-reassign": 2,
     //禁用__proto__
-    "no-proto": "error",
+    "no-proto": 2,
     //禁止多次声明同一个变量
-    "no-redeclare": "error",
+    "no-redeclare": 2,
     //return禁止赋值
-    "no-return-assign": ["error", "always"],
+    "no-return-assign": [2, "always"],
     //禁止return await
-    "no-return-await": "error",
-    "no-script-url": "error",
-    "no-self-assign": "error",
-    "no-self-compare": "error",
-    "no-sequences": "error",
+    "no-return-await": 2,
+    "no-script-url": 2,
+    "no-self-assign": 2,
+    "no-self-compare": 2,
+    "no-sequences": 2,
     //禁止未使用过的表达式
-    "no-unused-expressions": "error",
-    "no-useless-concat": "error",
+    "no-unused-expressions": 2,
+    "no-useless-concat": 2,
     //void
-    "no-void": "error",
+    "no-void": 2,
     //禁用 with 语句
-    "no-with": "error",
+    "no-with": 2,
     //要求使用 Error 对象作为 Promise 拒绝的原因
-    "prefer-promise-reject-errors": "error",
+    "prefer-promise-reject-errors": 2,
     //要求必须有基数 parseInt
-    radix: "error",
+    radix: 2,
     //禁止使用不带 await 表达式的 async 函数
-    "require-await": "error",
+    "require-await": 2,
     //var 必须在作用域顶部
-    "vars-on-top": "error",
+    "vars-on-top": 2,
     //需要把立即执行的函数包裹起来
-    "wrap-iife": ["error", "outside"],
+    "wrap-iife": [2, "outside"],
     // if Yoda 条件
-    yoda: "error",
+    yoda: 2,
     //禁止删除变量
-    "no-delete-var": "error",
-    "no-shadow-restricted-names": "error",
-    "no-undef": "error",
-    "no-undefined": "error",
-    "no-unused-vars": "warn",
-    "no-use-before-define": "error"
+    "no-delete-var": 2,
+    "no-shadow-restricted-names": 2,
+    "no-undef": 2,
+    "no-undefined": 2,
+    "no-unused-vars": 1,
+    "no-use-before-define": 2
   }
 };
 
