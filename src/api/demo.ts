@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:34:47
-* @LastEditTime: 2019-05-16 13:44:27
+* @LastEditTime: 2019-05-16 13:53:16
  */
 import { ajax, baseUrl } from '@/utils/http';
 
@@ -53,4 +53,5 @@ export const getOderDetail = (data) => {
 
     return returnData;
   }
+
 };
