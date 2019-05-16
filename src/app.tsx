@@ -1,8 +1,11 @@
 import Taro, { Component, Config } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
-import Index from './pages/index';
 
-import counterStore from './store/counter';
+import { printVersion } from '@/config/baseUrl';
+
+import counterStore from '@/store/counter';
+
+import Index from '@/pages/index';
 
 import './app.less';
 
@@ -25,7 +28,7 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    pages: ['pages/index/index'],
+    pages: ['pages/demo/index', 'pages/index/index'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -34,17 +37,21 @@ class App extends Component {
     },
   };
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentWillMount() {
+    printVersion();
+  }
 
-  componentDidCatchError () {}
+  componentDidHide() { }
+
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
       <Provider store={store}>
         <Index />
@@ -53,4 +60,4 @@ class App extends Component {
   }
 }
 
-Taro.render( <App />, document.getElementById( 'app' ) );
+Taro.render(<App />, document.getElementById('app'));

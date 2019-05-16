@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 13:29:37
+ * @LastEditTime: 2019-05-16 13:40:33
  */
 module.exports = {
   extends: ["taro"],
