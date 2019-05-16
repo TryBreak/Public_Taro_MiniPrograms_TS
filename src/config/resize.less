@@ -1,0 +1,148 @@
+/*
+* @LastEditors: Mark
+* @Description: In User Settings Edit
+* @Author: Mark
+* @Date: 2019-04-27 18:25:49
+* @LastEditTime: 2019-05-16 13:29:46
+ */
+@htmlFontSize: 0.5px;
+/*----- 字体 -----*/
+.fs(@px) {
+  font-size: unit(@px / @htmlFontSize, px);
+}
+.ls(@px) {
+  letter-spacing: unit(@px / @htmlFontSize, px);
+}
+
+/*----- 宽度 -----*/
+.w(@px) {
+  width: unit(@px / @htmlFontSize, px);
+}
+.w_min(@px) {
+  min-width: unit(@px / @htmlFontSize, px);
+}
+.w_max(@px) {
+  max-width: unit(@px / @htmlFontSize, px);
+}
+
+/*----- 高度 -----*/
+.h(@px) {
+  height: unit(@px / @htmlFontSize, px);
+}
+.h_min(@px) {
+  min-height: unit(@px / @htmlFontSize, px);
+}
+.h_max(@px) {
+  max-height: unit(@px / @htmlFontSize, px);
+}
+
+/*----- 行高 -----*/
+.lh(@px) {
+  line-height: unit(@px / @htmlFontSize, px);
+}
+
+/*----- margin -----*/
+
+.m(@t, @r:@t, @b:@t, @l:@r) when (@r >= 0) {
+  margin: unit(@t / @htmlFontSize, px) unit(@r / @htmlFontSize, px)
+    unit(@b / @htmlFontSize, px) unit(@l / @htmlFontSize, px);
+}
+
+.m(@t, @r:@t, @b:@t, @l:@r) when (@r = auto) {
+  margin: unit(@t / @htmlFontSize, px) auto;
+}
+
+.mt(@px) {
+  margin-top: unit(@px / @htmlFontSize, px);
+}
+.mr(@px) {
+  margin-right: unit(@px / @htmlFontSize, px);
+}
+.mb(@px) {
+  margin-bottom: unit(@px / @htmlFontSize, px);
+}
+.ml(@px) {
+  margin-left: unit(@px / @htmlFontSize, px);
+}
+
+/*----- padding -----*/
+.p(@t, @r:@t, @b:@t, @l:@r) when (@r >= 0) {
+  padding: unit(@t / @htmlFontSize, px) unit(@r / @htmlFontSize, px)
+    unit(@b / @htmlFontSize, px) unit(@l / @htmlFontSize, px);
+}
+
+.pt(@px) {
+  padding-top: unit(@px / @htmlFontSize, px);
+}
+.pr(@px) {
+  padding-right: unit(@px / @htmlFontSize, px);
+}
+.pb(@px) {
+  padding-bottom: unit(@px / @htmlFontSize, px);
+}
+.pl(@px) {
+  padding-left: unit(@px / @htmlFontSize, px);
+}
+
+/*----- 定位 -----*/
+.t(@px) {
+  top: unit(@px / @htmlFontSize, px);
+}
+.l(@px) {
+  left: unit(@px / @htmlFontSize, px);
+}
+.b(@px) {
+  bottom: unit(@px / @htmlFontSize, px);
+}
+.r(@px) {
+  right: unit(@px / @htmlFontSize, px);
+}
+
+/*----- border -----*/
+.border(@px, @type:solid, @color) {
+  border: unit(@px / @htmlFontSize, px) @type @color;
+}
+.border_t(@px, @type:solid, @color) {
+  border-top: unit(@px / @htmlFontSize, px) @type @color;
+}
+.border_r(@px, @type:solid, @color) {
+  border-right: unit(@px / @htmlFontSize, px) @type @color;
+}
+.border_b(@px, @type:solid, @color) {
+  border-bottom: unit(@px / @htmlFontSize, px) @type @color;
+}
+.border_l(@px, @type:solid, @color) {
+  border-left: unit(@px / @htmlFontSize, px) @type @color;
+}
+
+.radius(@px) {
+  border-radius: unit(@px / @htmlFontSize, px);
+}
+
+/*----- box-shadow -----*/
+.shadow_out(@h, @v, @blur, @spread, @color) {
+  box-shadow: unit(@h / @htmlFontSize, px) unit(@v / @htmlFontSize, px)
+    unit(@blur / @htmlFontSize, px) unit(@spread / @htmlFontSize, px) @color;
+}
+.shadow_in(@h, @v, @blur, @spread, @color) {
+  box-shadow: unit(@h / @htmlFontSize, px) unit(@v / @htmlFontSize, px)
+    unit(@blur / @htmlFontSize, px) unit(@spread / @htmlFontSize, px) @color
+    inset;
+}
+
+/*----- 文字超出隐藏显示... -----*/
+
+.fs_overflow(@num:1) when (@num = 1) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.fs_overflow(@num) when (@num > 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}

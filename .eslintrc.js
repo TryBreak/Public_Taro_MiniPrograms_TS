@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 13:22:34
+ * @LastEditTime: 2019-05-16 13:29:37
  */
 module.exports = {
   extends: ["taro"],
@@ -37,7 +37,7 @@ module.exports = {
     }],
     //分号
     semi: ["error", "always"],
-    "semi-spacing": ["error", { before: false, after: false }],
+    "semi-spacing": ["error", { before: false, after: true }],
     "semi-style": ["error", "last"],
     //console
     "no-console": [
@@ -69,7 +69,7 @@ module.exports = {
     //禁止混合缩进
     "no-mixed-spaces-and-tabs": "error",
     //空格缩进
-    indent: ["error", 2],
+    indent: ["error", 2, { "SwitchCase": 1 }],
     //调用构造函数必须带括号
     "new-parens": "error",
     //多行注释风格
