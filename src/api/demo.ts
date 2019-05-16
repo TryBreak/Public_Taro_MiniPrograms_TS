@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:34:47
-* @LastEditTime: 2019-05-16 14:20:38
+* @LastEditTime: 2019-05-16 15:57:05
  */
 import { ajax, baseUrl } from '@/utils/http';
 
