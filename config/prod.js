@@ -1,6 +1,14 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-15 18:00:25
+ * @LastEditTime: 2019-05-16 12:59:02
+ */
+
 module.exports = {
   env: {
-    NODE_ENV: '"production"'
+    NODE_ENV: '"production"',
   },
   defineConstants: {
   },
@@ -14,5 +22,5 @@ module.exports = {
      *     .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
      * }
      */
-  }
-}
+  },
+};
