@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-17 13:04:05
+ * @LastEditTime: 2019-05-17 13:06:24
  */
 module.exports = {
   extends: ["taro"],
@@ -103,7 +103,6 @@ module.exports = {
     }],
     'use-isnan': "error",
     'valid-typeof': ["error", { "requireStringLiterals": true }],
-    /////Best Practices
     //分号
     semi: ["error", "always"],
     "semi-spacing": ["error", { before: false, after: true }],
@@ -181,7 +180,7 @@ module.exports = {
     "no-extra-label": "error",
     //switch
     "no-fallthrough": "error",
-    //金庸浮点小数
+    //禁用浮点小数
     "no-floating-decimal": "error",
     //禁止改变原生对象的值
     "no-global-assign": "error",
