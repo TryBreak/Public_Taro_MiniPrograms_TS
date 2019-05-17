@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-16 17:38:51
+ * @LastEditTime: 2019-05-17 12:34:16
  */
 module.exports = {
   extends: ["taro"],
@@ -259,6 +259,18 @@ module.exports = {
     'computed-property-spacing': 'error',
     'eol-last': 'error',
     'implicit-arrow-linebreak': ["error", "beside"],
+    'key-spacing': "error",
+    //最大三层嵌套
+    'max-nested-callbacks': ["error", 3],
+    //最大参数数量 , 多余的参数应该使用解构
+    'max-params': ["error", 3],
+    'no-array-constructor': "error",
+    'no-mixed-operators': "error",
+    'no-multi-assign': "error",
+    'no-negated-condition': "error",
+    'no-new-object': "error",
+    'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
+    'object-curly-newline': ["error", { "minProperties": 3 }]
   }
 };
 
