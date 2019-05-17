@@ -3,7 +3,7 @@
  * @Description:
  * @Author: Mark
  * @Date: 2019-04-15 01:23:08
-* @LastEditTime: 2019-05-16 13:23:03
+* @LastEditTime: 2019-05-17 13:19:21
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';

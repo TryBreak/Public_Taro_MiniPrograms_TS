@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-17 13:06:24
+ * @LastEditTime: 2019-05-17 13:19:06
  */
 module.exports = {
   extends: ["taro"],
@@ -245,10 +245,7 @@ module.exports = {
     "no-unused-vars": "warn",
     "no-use-before-define": "error",
     //数组括号
-    'array-bracket-newline': [
-      'error',
-      { "multiline": true, "minItems": 2 }
-    ],
+    'array-bracket-newline': ['error', 'consistent'],
     'array-bracket-spacing': ["error", "never"],
     'array-element-newline': ["error", { "multiline": true, 'minItems': 3 }],
     //花括号
@@ -272,7 +269,7 @@ module.exports = {
     'object-curly-newline': ["error", {
       "ObjectPattern": { "multiline": true },
     }],
-    'arrow-body-style': 'error',
+    'arrow-body-style': ['error', 'always'],
     'no-dupe-class-members': "error",
     'no-const-assign': "error",
     'no-class-assign': "error",
