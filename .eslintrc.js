@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-17 12:51:16
+ * @LastEditTime: 2019-05-17 13:04:05
  */
 module.exports = {
   extends: ["taro"],
@@ -274,6 +274,14 @@ module.exports = {
       "ObjectPattern": { "multiline": true },
     }],
     'arrow-body-style': 'error',
+    'no-dupe-class-members': "error",
+    'no-const-assign': "error",
+    'no-class-assign': "error",
+    'no-useless-rename': "error",
+    'prefer-rest-params': "error",
+    'prefer-spread': "error",
+    'prefer-template': "error",
+    'sort-imports': 'off',
   }
 };
 
