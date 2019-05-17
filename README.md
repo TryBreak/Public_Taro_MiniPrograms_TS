@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:41:26
- * @LastEditTime: 2019-05-15 17:41:26
+ * @LastEditTime: 2019-05-17 16:31:12
  -->
 
 # Public_Taro_weapp_TS
@@ -51,18 +51,36 @@ npm run build:h5
 
 ```
 
-## 语法高亮和编辑器配置 `VSCode` 编辑器配置建议
+### VSCode 插件
 
-插件安装建议
+- ESlint
+- TSLint
 
-- ESLint
-
-当前版本需要关闭修饰器警告
-
-在 setting.json 中加入设置:
+### settings.json 设置
 
 ```json
-  "javascript.implicitProjectConfig.experimentalDecorators": true
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+}
 ```
 
 ## 脚手架定制化
