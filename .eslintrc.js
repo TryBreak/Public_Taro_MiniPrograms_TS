@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-17 13:19:06
+ * @LastEditTime: 2019-05-17 13:39:42
  */
 module.exports = {
   extends: ["taro"],
@@ -58,14 +58,6 @@ module.exports = {
     'no-ex-assign': "error",
     //禁止不必要的布尔类型转换
     'no-extra-boolean-cast': "error",
-    //圆括号使用规则
-    'no-extra-parens': ["error", "all", {
-      "ignoreJSX": "all",
-      "conditionalAssign": false,
-      "returnAssign": false,
-      "nestedBinaryExpressions": false,
-      "enforceForArrowConditionals": false
-    }],
     'no-extra-semi': "error",
     'no-func-assign': "error",
     'no-inner-declarations': "error",
