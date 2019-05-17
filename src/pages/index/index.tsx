@@ -3,13 +3,17 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
-* @LastEditTime: 2019-05-16 16:05:56
+* @LastEditTime: 2019-05-17 12:51:30
  */
-import Taro, { Component, } from '@tarojs/taro';
-import { View, Button, Image, Text, } from '@tarojs/components';
-import { getUrlParam, } from '@/utils/utils';
-import { WebView_domain, baseUrl, image_domain, } from '@/config/baseUrl';
-import { tusiji, } from '@/images/load';
+import Taro, { Component } from '@tarojs/taro';
+import {
+  View, Button, Image, Text,
+} from '@tarojs/components';
+import { getUrlParam } from '@/utils/utils';
+import {
+  WebView_domain, baseUrl, image_domain,
+} from '@/config/baseUrl';
+import { tusiji } from '@/images/load';
 import './index.less';
 
 //image
@@ -42,7 +46,7 @@ class _page extends Component {
   componentDidHide() { }
 
   componentDidShow() {
-    let { id, } = getUrlParam();
+    let { id } = getUrlParam();
     console.info('id--', id);
   }
 

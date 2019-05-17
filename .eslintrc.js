@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:55:55
- * @LastEditTime: 2019-05-17 12:34:16
+ * @LastEditTime: 2019-05-17 12:51:16
  */
 module.exports = {
   extends: ["taro"],
@@ -129,7 +129,7 @@ module.exports = {
     //大括号风格
     "brace-style": "error",
     //拖尾逗号
-    "comma-dangle": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
     //正则表达式必须被括起来
     "wrap-regex": "error",
     //不要省地方
@@ -270,7 +270,10 @@ module.exports = {
     'no-negated-condition': "error",
     'no-new-object': "error",
     'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
-    'object-curly-newline': ["error", { "minProperties": 3 }]
+    'object-curly-newline': ["error", {
+      "ObjectPattern": { "multiline": true },
+    }],
+    'arrow-body-style': 'error',
   }
 };
 

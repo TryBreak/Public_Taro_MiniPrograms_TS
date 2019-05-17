@@ -18,7 +18,7 @@ interface Index {
   props: PageStateProps;
 }
 
-@inject( 'counterStore' )
+@inject('counterStore')
 @observer
 class Index extends Component {
   /**
@@ -32,19 +32,19 @@ class Index extends Component {
     navigationBarTitleText: '首页',
   };
 
-  componentWillMount () {}
+  componentWillMount() { }
 
-  componentWillReact () {
-    console.log( 'componentWillReact' );
+  componentWillReact() {
+    console.log('componentWillReact');
   }
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentWillUnmount () {}
+  componentWillUnmount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
   increment = () => {
     const { counterStore } = this.props;
@@ -61,10 +61,8 @@ class Index extends Component {
     counterStore.incrementAsync();
   };
 
-  render () {
-    const {
-      counterStore: { counter },
-    } = this.props;
+  render() {
+    const { counterStore: { counter } } = this.props;
     return (
       <View className="index">
         <Button onClick={this.increment}>+</Button>
