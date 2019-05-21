@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:37:22
-* @LastEditTime: 2019-05-16 13:35:59
+* @LastEditTime: 2019-05-21 18:39:16
  */
 import Taro from '@tarojs/taro';
 import { baseUrl } from '../config/baseUrl';
@@ -101,7 +101,7 @@ export const formatDate = (timeUnix) => {
   let hour = now.getHours();
   let minute = now.getMinutes();
 
-  return year + '-' + month + '-' + date + '   ' + hour + ':' + minute;
+  return `${year}-${month}-${date}   ${hour}:${minute}`;
 };
 
 export const fs_overflow = (str, num) => {
@@ -113,7 +113,7 @@ export const fs_overflow = (str, num) => {
    */
   if (str) {
     if (str.length > num) {
-      return str.slice(0, num) + '...';
+      return `${str.slice(0, num)}...`;
     } else {
       return str;
     }

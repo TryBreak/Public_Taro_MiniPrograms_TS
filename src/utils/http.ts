@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-22 01:22:37
-* @LastEditTime: 2019-05-16 13:36:21
+* @LastEditTime: 2019-05-21 18:39:04
  */
 import Taro from '@tarojs/taro';
 import { getStore } from './utils';
@@ -38,7 +38,7 @@ const request = ({ url, data, method }) => {
     method,
     header: {
       'content-type': 'application/x-www-form-urlencoded',
-      Authorization: 'Bearer ' + token,
+      Authorization: `Bearer ${token}`,
     },
   });
 };
