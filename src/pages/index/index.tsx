@@ -1,18 +1,14 @@
 /*
-* @LastEditors: Mark
+ * @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
-* @LastEditTime: 2019-05-17 12:51:30
+ * @LastEditTime: 2019-05-24 14:11:47
  */
 import Taro, { Component } from '@tarojs/taro';
-import {
-  View, Button, Image, Text,
-} from '@tarojs/components';
+import { View, Button, Image, Text } from '@tarojs/components';
 import { getUrlParam } from '@/utils/utils';
-import {
-  WebView_domain, baseUrl, image_domain,
-} from '@/config/baseUrl';
+import { WebView_domain, baseUrl, image_domain } from '@/config/baseUrl';
 import { tusiji } from '@/images/load';
 import './index.less';
 
@@ -37,13 +33,13 @@ class _page extends Component {
     console.log(123);
   }
 
-  componentWillReact() { }
+  componentWillReact() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {}
 
-  componentDidHide() { }
+  componentDidHide() {}
 
   componentDidShow() {
     let { id } = getUrlParam();

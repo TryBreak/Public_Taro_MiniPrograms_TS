@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:41:26
- * @LastEditTime: 2019-05-22 10:29:55
+ * @LastEditTime: 2019-05-24 14:14:03
  -->
 
 # Public_Taro_MiniPrograms_TS
@@ -56,7 +56,10 @@ npm run build:h5
 ### VSCode 插件
 
 - ESlint
-- TSLint
+
+美化辅助插件
+
+- Prettier
 
 ### settings.json 设置
 
@@ -64,7 +67,14 @@ npm run build:h5
 {
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
+  "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "eslint.validate": [
     "html",
     "javascript",
@@ -100,7 +110,7 @@ Mobx
 
 ## 数据请求方法
 
-## 实用工具库(待验证)
+## 实用工具库
 
 Lodash
 
