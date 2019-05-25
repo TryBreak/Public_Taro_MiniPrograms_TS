@@ -3,7 +3,7 @@ import Taro, { Component, Config } from '@tarojs/taro';
 import { View, Button, Text } from '@tarojs/components';
 import { observer, inject } from '@tarojs/mobx';
 
-import './index.less';
+import './index.scss';
 
 type PageStateProps = {
   counterStore: {
@@ -32,19 +32,19 @@ class Index extends Component {
     navigationBarTitleText: '首页',
   };
 
-  componentWillMount() { }
+  componentWillMount() {}
 
   componentWillReact() {
     console.log('componentWillReact');
   }
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {}
 
-  componentDidShow() { }
+  componentDidShow() {}
 
-  componentDidHide() { }
+  componentDidHide() {}
 
   increment = () => {
     const { counterStore } = this.props;
@@ -62,7 +62,7 @@ class Index extends Component {
   };
 
   render() {
-    const { counterStore: { counter } } = this.props;
+    const {counterStore: { counter }} = this.props;
     return (
       <View className="index">
         <Button onClick={this.increment}>+</Button>

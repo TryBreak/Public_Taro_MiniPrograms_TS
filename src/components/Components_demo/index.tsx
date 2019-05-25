@@ -1,14 +1,14 @@
 /*
-* @LastEditors: Mark
+ * @LastEditors: Mark
  * @Description:
  * @Author: Mark
  * @Date: 2019-04-15 01:23:08
-* @LastEditTime: 2019-05-17 13:19:21
+ * @LastEditTime: 2019-05-25 15:46:35
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
 import PropTypes from 'prop-types';
-import './index.less';
+import './index.scss';
 /**
  * @description:
  * @param: <Search_input my-class="Search_Box" />
@@ -37,17 +37,17 @@ class Components_demo extends Component {
       },
     ],
   };
-  componentWillMount() { }
+  componentWillMount() {}
 
-  componentWillReact() { }
+  componentWillReact() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {}
 
-  componentDidShow() { }
+  componentDidShow() {}
 
-  componentDidHide() { }
+  componentDidHide() {}
   render() {
     const { list }: any = this.props;
 

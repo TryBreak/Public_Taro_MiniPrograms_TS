@@ -13,7 +13,7 @@ import { WebView_domain, baseUrl, image_domain } from '@/config/baseUrl';
 import { tusiji } from '@/images/load';
 //image
 
-import './index.less';
+import './index.scss';
 
 class _page extends Component {
   config = {
@@ -30,17 +30,17 @@ class _page extends Component {
     };
   }
 
-  componentWillMount() { }
+  componentWillMount() {}
 
-  componentWillReact() { }
+  componentWillReact() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
   componentWillUnmount() {
     console.log('离开页面');
   }
 
-  componentDidHide() { }
+  componentDidHide() {}
 
   componentDidShow() {
     let { id } = getUrlParam();

@@ -1,9 +1,9 @@
 /*
-* @LastEditors: Mark
+ * @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
-* @LastEditTime: 2019-05-16 13:32:27
+ * @LastEditTime: 2019-05-25 15:46:45
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
@@ -13,7 +13,7 @@ import { WebView_domain, baseUrl, image_domain } from '@/config/baseUrl';
 import { tusiji } from '@/images/load';
 //image
 
-import './index.less';
+import './index.scss';
 
 class _page extends Component {
   config = {
@@ -30,17 +30,17 @@ class _page extends Component {
     };
   }
 
-  componentWillMount() { }
+  componentWillMount() {}
 
-  componentWillReact() { }
+  componentWillReact() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
   componentWillUnmount() {
     console.log('离开页面');
   }
 
-  componentDidHide() { }
+  componentDidHide() {}
 
   componentDidShow() {
     let { id } = getUrlParam();

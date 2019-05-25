@@ -3,14 +3,14 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-05-24 14:11:47
+ * @LastEditTime: 2019-05-25 15:46:52
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
 import { getUrlParam } from '@/utils/utils';
 import { WebView_domain, baseUrl, image_domain } from '@/config/baseUrl';
 import { tusiji } from '@/images/load';
-import './index.less';
+import './index.scss';
 
 //image
 //image
