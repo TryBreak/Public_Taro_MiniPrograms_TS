@@ -7,7 +7,7 @@ import counterStore from '@/store/counter';
 
 import Index from '@/pages/index';
 
-import './app.less';
+import './app.scss';
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -29,11 +29,11 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/demo/scssDemo/index',
       'pages/demo/pageDemo/index',
       'pages/demo/pageDemo_js/index',
       'pages/demo/index',
       'pages/index/index',
-      'pages/demo/scssDemo',
     ],
     window: {
       backgroundTextStyle: 'light',
