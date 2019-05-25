@@ -33,6 +33,7 @@ class App extends Component {
       'pages/demo/pageDemo_js/index',
       'pages/demo/index',
       'pages/index/index',
+      'pages/demo/scssDemo',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -42,17 +43,17 @@ class App extends Component {
     },
   };
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentDidShow() { }
+  componentDidShow() {}
 
   componentWillMount() {
     printVersion();
   }
 
-  componentDidHide() { }
+  componentDidHide() {}
 
-  componentDidCatchError() { }
+  componentDidCatchError() {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
