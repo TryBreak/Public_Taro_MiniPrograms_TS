@@ -1,9 +1,9 @@
 /*
-* @LastEditors: Mark
+ * @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 16:01:28
-* @LastEditTime: 2019-05-21 18:39:30
+ * @LastEditTime: 2019-05-25 15:53:27
  */
 
 // let url = 'https://xcx.joywaygym.com'; //生产服
@@ -24,6 +24,11 @@ export const image_domain = image_url;
 // 版本信息管理
 const versionList = [
   {
+    code: '0.2.0',
+    describe: '支持编译sass',
+    user: 'Mark',
+  },
+  {
     code: '0.1.0',
     describe: 'Public_Taro_weapp',
     user: 'Mark',
@@ -31,7 +36,7 @@ const versionList = [
 ];
 
 export const printVersion = () => {
-  const version = versionList[versionList.length - 1];
+  const version = versionList[0];
   console.groupCollapsed(
     `%c version -- ${version.code}`,
     'font-size:10;color:green;font-weight:bold;'

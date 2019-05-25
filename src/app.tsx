@@ -29,7 +29,6 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/demo/scssDemo/index',
       'pages/demo/pageDemo/index',
       'pages/demo/pageDemo_js/index',
       'pages/demo/index',

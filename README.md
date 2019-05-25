@@ -3,7 +3,7 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-15 17:41:26
- * @LastEditTime: 2019-05-24 14:14:03
+ * @LastEditTime: 2019-05-25 15:53:49
  -->
 
 # Public_Taro_MiniPrograms_TS
@@ -96,6 +96,8 @@ npm run build:h5
 ```
 
 ## 脚手架定制化
+
+- 支持编译 less,css 以及 scss
 
 ## 状态管理和页面通信
 
