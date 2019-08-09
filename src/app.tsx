@@ -1,13 +1,13 @@
-import Taro, { Component, Config } from '@tarojs/taro';
-import { Provider } from '@tarojs/mobx';
+import Taro, { Component, Config } from "@tarojs/taro";
+import { Provider } from "@tarojs/mobx";
 
-import { printVersion } from '@/config/baseUrl';
+import { printVersion } from "@/config/baseUrl";
 
-import counterStore from '@/store/counter';
+import counterStore from "@/store/counter";
 
-import Index from '@/pages/index';
+import Index from "@/pages/index";
 
-import './app.scss';
+import "./app.scss";
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -16,7 +16,7 @@ import './app.scss';
 // }
 
 const store = {
-  counterStore,
+  counterStore
 };
 
 class App extends Component {
@@ -29,17 +29,17 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/demo/pageDemo/index',
-      'pages/demo/pageDemo_js/index',
-      'pages/demo/index',
-      'pages/index/index',
+      "pages/demo/mobxDemo/index",
+      "pages/demo/pageDemo/index",
+      "pages/demo/pageDemo_js/index",
+      "pages/index/index"
     ],
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black',
-    },
+      backgroundTextStyle: "light",
+      navigationBarBackgroundColor: "#fff",
+      navigationBarTitleText: "WeChat",
+      navigationBarTextStyle: "black"
+    }
   };
 
   componentDidMount() {}
@@ -65,4 +65,4 @@ class App extends Component {
   }
 }
 
-Taro.render(<App />, document.getElementById('app'));
+Taro.render(<App />, document.getElementById("app"));
