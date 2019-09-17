@@ -1,7 +1,7 @@
-import { ComponentType } from "react";
-import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Button, Text } from "@tarojs/components";
-import { observer, inject } from "@tarojs/mobx";
+import {ComponentType} from "react";
+import Taro, {Component, Config} from "@tarojs/taro";
+import {View, Button, Text} from "@tarojs/components";
+import {observer, inject} from "@tarojs/mobx";
 
 import "./index.scss";
 
@@ -21,6 +21,7 @@ interface Index {
 @inject("counterStore")
 @observer
 class Index extends Component {
+
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -28,15 +29,9 @@ class Index extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
-    navigationBarTitleText: "首页"
-  };
 
   componentWillMount() {}
 
-  componentWillReact() {
-    console.log("componentWillReact");
-  }
 
   componentDidMount() {}
 
@@ -46,34 +41,51 @@ class Index extends Component {
 
   componentDidHide() {}
 
+  componentWillReact() {
+
+    console.log("componentWillReact");
+
+  }
+
+  config: Config = {
+    navigationBarTitleText: "首页",
+  };
+
   increment = () => {
-    const { counterStore } = this.props;
+
+    const {counterStore} = this.props;
     counterStore.increment();
+
   };
 
   decrement = () => {
-    const { counterStore } = this.props;
+
+    const {counterStore} = this.props;
     counterStore.decrement();
+
   };
 
   incrementAsync = () => {
-    const { counterStore } = this.props;
+
+    const {counterStore} = this.props;
     counterStore.incrementAsync();
+
   };
 
   render() {
-    const {
-      counterStore: { counter }
-    } = this.props;
+
+    const {counterStore: {counter}} = this.props;
     return (
-      <View className="index">
+      <View className='index'>
         <Button onClick={this.increment}>+</Button>
         <Button onClick={this.decrement}>-</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
         <Text>{counter}</Text>
       </View>
     );
+
   }
+
 }
 
 export default Index as ComponentType;

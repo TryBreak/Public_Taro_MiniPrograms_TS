@@ -1,11 +1,8 @@
-import Taro, { Component, Config } from "@tarojs/taro";
-import { Provider } from "@tarojs/mobx";
+import Taro, {Component, Config} from "@tarojs/taro";
+import {Provider} from "@tarojs/mobx";
+import Index from "./pages/index";
 
-import { printVersion } from "@/config/baseUrl";
-
-import counterStore from "@/store/counter";
-
-import Index from "@/pages/index";
+import counterStore from "./store/counter";
 
 import "./app.scss";
 
@@ -16,10 +13,11 @@ import "./app.scss";
 // }
 
 const store = {
-  counterStore
+  counterStore,
 };
 
 class App extends Component {
+
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -27,28 +25,10 @@ class App extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
-    pages: [
-      "pages/demo/mobxDemo/index",
-      "pages/demo/pageDemo/index",
-      "pages/demo/pageDemo_js/index",
-      "pages/index/index"
-    ],
-    window: {
-      backgroundTextStyle: "light",
-      navigationBarBackgroundColor: "#fff",
-      navigationBarTitleText: "WeChat",
-      navigationBarTextStyle: "black"
-    }
-  };
 
   componentDidMount() {}
 
   componentDidShow() {}
-
-  componentWillMount() {
-    printVersion();
-  }
 
   componentDidHide() {}
 
@@ -56,13 +36,31 @@ class App extends Component {
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
+  config: Config = {
+    pages: [
+      "pages/index/index",
+      "pages/demo/pageDemo_js/index",
+      "pages/demo/pageDemo/index",
+      "pages/demo/mobxDemo/index",
+    ],
+    window: {
+      backgroundTextStyle: "light",
+      navigationBarBackgroundColor: "#fff",
+      navigationBarTitleText: "WeChat",
+      navigationBarTextStyle: "black",
+    },
+  };
+
   render() {
+
     return (
       <Provider store={store}>
         <Index />
       </Provider>
     );
+
   }
+
 }
 
 Taro.render(<App />, document.getElementById("app"));

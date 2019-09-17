@@ -1,13 +1,7 @@
-/*
-* @LastEditors: Mark
- * @Description: In User Settings Edit
- * @Author: Mark
- * @Date: 2019-04-26 15:34:47
-* @LastEditTime: 2019-05-17 13:19:10
- */
-import { ajax, baseUrl } from '@/utils/http';
+import {ajax, baseUrl} from "@/utils/http";
 
 export const getCommentListByDomainId = (data) => {
+
   /**
    * @description: 课程评论 - 课程详情
    * @param {
@@ -19,32 +13,41 @@ export const getCommentListByDomainId = (data) => {
    * @return:
    */
   return ajax({
-    url: '/api/comment/list',
+    url: "/api/comment/list",
     data,
-    method: 'get',
+    method: "get",
   });
+
 };
 
 export const getOderDetail = (data) => {
+
   /**
    * @description: 负责接口需要进行数据map的
    */
   return new Promise(function (resolve, reject) {
+
     ajax({
-      url: '/u/order/blockDetail',
+      url: "/u/order/blockDetail",
       data,
-      method: 'get',
+      method: "get",
     })
       .then((res) => {
+
         const asyncData = filter(res);
         resolve(asyncData);
+
       })
       .catch((err) => {
+
         reject(err);
+
       });
+
   });
 
   function filter(res) {
+
     const returnData = res.data;
     //数据处理函数
     const venuesHomeImage = returnData.venuesHomeImage;
@@ -52,6 +55,7 @@ export const getOderDetail = (data) => {
     returnData.cover_HomeImage = cover_HomeImage;
 
     return returnData;
+
   }
 
 };

@@ -1,11 +1,3 @@
-<!--
- * @LastEditors: Mark
- * @Description: none
- * @Author: Mark
- * @Date: 2019-05-15 17:41:26
- * @LastEditTime: 2019-05-25 15:53:49
- -->
-
 # Public_Taro_MiniPrograms_TS
 
 基于`Taro`和`TypeScript`的小程序多端编译框架,根据公司需求专门开发定制
@@ -91,7 +83,7 @@ npm run build:h5
       "language": "vue",
       "autoFix": true
     }
-  ],
+  ]
 }
 ```
 
