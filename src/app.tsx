@@ -1,5 +1,5 @@
-import Taro, {Component, Config} from "@tarojs/taro";
-import {Provider} from "@tarojs/mobx";
+import Taro, { Component, Config } from "@tarojs/taro";
+import { Provider } from "@tarojs/mobx";
 import Index from "./pages/index";
 
 import counterStore from "./store/counter";
@@ -17,7 +17,6 @@ const store = {
 };
 
 class App extends Component {
-
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -52,15 +51,12 @@ class App extends Component {
   };
 
   render() {
-
     return (
       <Provider store={store}>
         <Index />
       </Provider>
     );
-
   }
-
 }
 
 Taro.render(<App />, document.getElementById("app"));

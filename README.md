@@ -57,18 +57,32 @@ npm run build:h5
 
 ```json
 {
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "eslint.validate": [
-    "html",
     "javascript",
     "javascriptreact",
     {
@@ -89,7 +103,7 @@ npm run build:h5
 
 ## 脚手架定制化
 
-- 支持编译 less,css 以及 scss
+- 支持编译 css 以及 scss
 
 ## 状态管理和页面通信
 

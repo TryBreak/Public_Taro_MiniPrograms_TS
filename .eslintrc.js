@@ -52,6 +52,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     //重点指导
+    "no-unused-vars": "off",
     "no-var": "error",
     "arrow-body-style": ["error", "always"],
     "arrow-parens": ["error", "always"],

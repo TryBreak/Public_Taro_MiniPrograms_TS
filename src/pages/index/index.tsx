@@ -1,26 +1,21 @@
-import Taro, {Component, Config} from "@tarojs/taro";
-import {View, Button, Image, Text} from "@tarojs/components";
-import {getUrlParam} from "@/utils/utils";
-import {WebView_domain, baseUrl, image_domain} from "@/config/baseUrl";
-import {tusiji} from "@/images/load";
+import Taro, { Component, Config } from "@tarojs/taro";
+import { View, Button, Image, Text } from "@tarojs/components";
+import { getUrlParam } from "@/utils/utils";
+import { WebView_domain, baseUrl, image_domain } from "@/config/baseUrl";
+import { tusiji } from "@/images/load";
 import "./index.scss";
 
 class _page extends Component {
-
   constructor(props) {
-
     super(props);
     // const token = getStore('userToken');
     this.state = {
       // token,
     };
-
   }
 
   componentWillMount() {
-
     console.log(123);
-
   }
 
   componentDidMount() {}
@@ -30,10 +25,8 @@ class _page extends Component {
   componentDidHide() {}
 
   componentDidShow() {
-
-    const {id} = getUrlParam();
+    const { id } = getUrlParam();
     console.info("id--", id);
-
   }
 
   componentWillReact() {}
@@ -44,9 +37,7 @@ class _page extends Component {
     navigationBarBackgroundColor: "#62A8FA",
   };
 
-
   render() {
-
     return (
       <View className='page'>
         这里是demo页面
@@ -68,9 +59,7 @@ class _page extends Component {
         </View>
       </View>
     );
-
   }
-
 }
 
 export default _page;

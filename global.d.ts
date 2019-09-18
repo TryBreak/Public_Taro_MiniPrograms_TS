@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 declare module "*.png";
 declare module "*.gif";
 declare module "*.jpg";
