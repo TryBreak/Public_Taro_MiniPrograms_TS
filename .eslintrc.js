@@ -6,48 +6,51 @@ module.exports = {
   env: {
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
   },
   // ESLint默认风格指南和TS风格指南混用
   extends: [
-    "taro",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "taro",
   ],
   globals: {
     Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    SharedArrayBuffer: "readonly",
   },
   parserOptions: {
     ecmaVersion: 2018,
     useJSXTextNode: true,
-    project: "./tsconfig.json"
+    project: "./tsconfig.json",
   },
   rules: {
-    // taro
+    // react
     "react/jsx-filename-extension": [
       1,
       {
-        extensions: [".js", ".jsx", ".tsx"]
-      }
+        extensions: [".js", ".jsx", ".tsx"],
+      },
     ],
     //TS相关
+    "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-angle-bracket-type-assertion": "off",
     "@typescript-eslint/no-this-alias": [
       "error",
       {
         allowDestructuring: true, // Allow `const { props, state } = this`; false by default
-        allowedNames: ["_this"] // Allow `const self = this`; `[]` by default
-      }
+        allowedNames: ["_this"], // Allow `const self = this`; `[]` by default
+      },
     ],
-    "@typescript-eslint/class-name-casing":"off",
-    "@typescript-eslint/no-unused-vars":"off",
-    "@typescript-eslint/explicit-function-return-type":"off",
+    "@typescript-eslint/triple-slash-reference": "off",
+    "@typescript-eslint/class-name-casing": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     //重点指导
     "no-var": "error",
     "arrow-body-style": ["error", "always"],
@@ -57,8 +60,8 @@ module.exports = {
       "error",
       {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ],
     "no-confusing-arrow": "error",
     "no-duplicate-imports": "error",
@@ -81,9 +84,9 @@ module.exports = {
           "group",
           "groupCollapsed",
           "groupEnd",
-          "table"
-        ]
-      }
+          "table",
+        ],
+      },
     ],
     //ES6相关
     "prefer-const": "error",
@@ -103,6 +106,7 @@ module.exports = {
     strict: "error",
     //最佳实践
     yoda: "error",
+    "no-prototype-builtins": "off",
     "wrap-iife": ["error", "outside"],
     "vars-on-top": "error",
     "require-await": "error",
@@ -137,7 +141,7 @@ module.exports = {
     "no-eq-null": "error",
     "no-div-regex": "error",
     "no-caller": "error",
-    "no-alert": "error",
+    "no-alert": "warn",
     "guard-for-in": "error",
     eqeqeq: ["error", "always"],
     "dot-location": ["error", "property"],
@@ -160,28 +164,17 @@ module.exports = {
     "consistent-this": ["error", "_this"],
     "eol-last": "error",
     "func-call-spacing": "error",
-    "function-paren-newline": ["error", "multiline"],
     "id-length": ["error", { min: 1 }],
     "implicit-arrow-linebreak": ["error", "beside"],
-    indent: ['error', 2, { SwitchCase: 1 }],
+    indent: ["error", 2, { SwitchCase: 1 }],
     "jsx-quotes": "error",
     "key-spacing": "error",
-    "keyword-spacing": [
-      "error",
-      {
-        overrides: {
-          if: { after: false },
-          for: { after: false },
-          while: { after: false },
-          function: { after: false }
-        }
-      }
-    ],
+    "keyword-spacing": "error",
     "linebreak-style": ["error", "unix"],
     "lines-between-class-members": ["error", "always"],
     "no-multiple-empty-lines": "error",
     "max-depth": ["error", 3],
-    "max-lines-per-function": ["error"],
+    "max-lines-per-function": ["error", 200],
     "max-nested-callbacks": ["error", 3],
     "max-params": ["error", 3],
     "multiline-ternary": ["error", "never"],
@@ -201,24 +194,15 @@ module.exports = {
       "error",
       {
         ObjectPattern: {
-          multiline: true
-        }
-      }
+          multiline: true,
+        },
+      },
     ],
-    "object-curly-spacing": "error",
     "object-property-newline": "error",
     "one-var": ["error", "never"],
     "one-var-declaration-per-line": "error",
     "operator-assignment": "error",
     "operator-linebreak": "error",
-    "padded-blocks": [
-      "error",
-      {
-        blocks: "always",
-        classes: "always",
-        switches: "always"
-      }
-    ],
     "prefer-object-spread": "error",
     "quote-props": ["error", "as-needed"],
     quotes: "error",
@@ -232,8 +216,8 @@ module.exports = {
       {
         anonymous: "always",
         named: "never",
-        asyncArrow: "always"
-      }
+        asyncArrow: "always",
+      },
     ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
@@ -242,9 +226,8 @@ module.exports = {
     "template-tag-spacing": "error",
     "unicode-bom": "error",
     "wrap-regex": "error",
-  }
+  },
 };
-
 
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
 
