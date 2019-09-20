@@ -66,6 +66,7 @@ class _page extends Component {
           getUserInfo={(e) => {
             return this.getUserInfo(e);
           }}
+          my-class="loginBtn"
         >
           授权登录
         </GetUserInfo>
