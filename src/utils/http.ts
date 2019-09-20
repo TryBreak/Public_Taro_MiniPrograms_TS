@@ -1,38 +1,29 @@
 import Taro from "@tarojs/taro";
-import {getStore} from "./utils";
-import {baseUrl} from "../config/baseUrl";
+import { getStore } from "./utils";
+import { baseUrl } from "../config/baseUrl";
 
-export {baseUrl};
+export { baseUrl };
 
-const interceptor = function (chain) {
-
+const interceptor = function(chain) {
   const requestParams = chain.requestParams;
   // const { method, data, url } = requestParams;
   return chain.proceed(requestParams).then((res) => {
-
     const data = res.data;
-    if(data.code === "OK") {
-
+    if (data.code === "OK") {
       return data;
-
     } else {
-
       Taro.showToast({
         title: data.message,
         icon: "none",
       });
       return data;
-
     }
-
   });
-
 };
 
 Taro.addInterceptor(interceptor);
 
-const request = ({url, data, method}) => {
-
+const request = ({ url, data = "", method }) => {
   const token = getStore("userToken");
   return Taro.request({
     url: baseUrl + url,
@@ -43,7 +34,6 @@ const request = ({url, data, method}) => {
       Authorization: `Bearer ${token}`,
     },
   });
-
 };
 
 export const ajax = request;

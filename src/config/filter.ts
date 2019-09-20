@@ -25,48 +25,32 @@ export const typeList = [
   },
 ];
 
-export const sportsType_Find = ({id, name}) => {
-
+export const sportsType_Find = ({ id, name }) => {
   let returnObj = {};
-  if(id) {
-
-    for(let i = 0; i < typeList.length; i++) {
-
+  if (id) {
+    for (let i = 0; i < typeList.length; i++) {
       const el = typeList[i];
-      if(el.id === id) {
-
+      if (el.id === id) {
         returnObj = el;
         break;
-
       }
-
     }
-
-  } else if(name) {
-
-    for(let i = 0; i < typeList.length; i++) {
-
+  } else if (name) {
+    for (let i = 0; i < typeList.length; i++) {
       const el = typeList[i];
-      if(el.name === name) {
-
+      if (el.name === name) {
         returnObj = el;
         break;
-
       }
-
     }
-
   }
   return returnObj;
-
 };
 
 export const render_pay_status = (status) => {
-
   let name = "";
   let color = "";
   switch (Number(status)) {
-
     case 1:
       name = "待付款";
       color = "red";
@@ -89,11 +73,9 @@ export const render_pay_status = (status) => {
       break;
     default:
       break;
-
   }
   return {
     name,
     color,
   };
-
 };

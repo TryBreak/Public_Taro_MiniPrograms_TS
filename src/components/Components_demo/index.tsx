@@ -1,5 +1,5 @@
-import Taro, {Component} from "@tarojs/taro";
-import {View} from "@tarojs/components";
+import Taro, { Component } from "@tarojs/taro";
+import { View } from "@tarojs/components";
 import PropTypes from "prop-types";
 import "./index.scss";
 /**
@@ -8,7 +8,6 @@ import "./index.scss";
  * @return:
  */
 class Components_demo extends Component {
-
   static externalClasses = ["my-class"];
 
   static propTypes = {
@@ -36,7 +35,6 @@ class Components_demo extends Component {
 
   componentWillMount() {}
 
-
   componentDidMount() {}
 
   componentWillUnmount() {}
@@ -48,22 +46,17 @@ class Components_demo extends Component {
   componentWillReact() {}
 
   render() {
-
-    const {list}: any = this.props;
+    const { list }: any = this.props;
 
     return (
-      <View className='wrapper my-class'>
+      <View className="wrapper my-class">
         这里是一个组件
         {list.map((item, index) => {
-
           return <View key={index}>{item.title}</View>;
-
         })}
       </View>
     );
-
   }
-
 }
 
 export default Components_demo;

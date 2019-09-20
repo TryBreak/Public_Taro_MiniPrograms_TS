@@ -1,0 +1,20 @@
+.wrapper {
+  display: inline;
+}
+.buttonClear {
+  display: inline-block;
+  padding: 0;
+  border: 0rpx solid transparent;
+  background-color: transparent;
+  color: #000;
+  line-height: normal;
+  margin: 0;
+  &::after {
+    border: none;
+  }
+}
+.buttonClear.button-hover {
+  color: #000;
+  background-color: transparent;
+  border: 0rpx solid transparent;
+}

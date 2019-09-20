@@ -28,20 +28,18 @@ const versionList = [
 ];
 
 export const printVersion = () => {
-
   const version = versionList[0];
   console.groupCollapsed(
     `%c version -- ${version.code}`,
-    "font-size:10;color:green;font-weight:bold;"
+    "font-size:10;color:green;font-weight:bold;",
   );
   console.info(
     `%c describe -- ${version.describe}`,
-    "font-size:10;color:green;font-weight:bold;"
+    "font-size:10;color:green;font-weight:bold;",
   );
   console.info(
     `%c user -- ${version.user}`,
-    "font-size:10;color:green;font-weight:bold;"
+    "font-size:10;color:green;font-weight:bold;",
   );
   console.groupEnd();
-
 };
