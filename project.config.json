@@ -1,21 +1,21 @@
 {
-  "description": "小程序demo",
-  "appid": "wxa2afd9f45078d537",
-  "projectname": "Taro-demo",
-  "setting": {
-    "urlCheck": false,
-    "es6": false,
-    "postcss": false,
-    "minified": false,
-    "newFeature": true,
-    "nodeModules": false,
-    "autoAudits": false,
-    "uglifyFileName": false
-  },
-  "compileType": "miniprogram",
-  "miniprogramRoot": "dist/",
-  "libVersion": "2.6.6",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {}
+	"description": "小程序demo",
+	"appid": "wx6aa37b570324303c",
+	"projectname": "Taro-demo",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": false
+	},
+	"compileType": "miniprogram",
+	"miniprogramRoot": "dist/",
+	"libVersion": "2.9.0",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
 }
