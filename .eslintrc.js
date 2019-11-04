@@ -26,6 +26,7 @@ module.exports = {
     project: "./tsconfig.json",
   },
   rules: {
+    "import/first": "off",
     // react
     "react/jsx-filename-extension": [
       1,
@@ -178,7 +179,7 @@ module.exports = {
     "max-lines-per-function": ["error", 200],
     "max-nested-callbacks": ["error", 3],
     "max-params": ["error", 3],
-    "multiline-ternary": ["error", "never"],
+    "multiline-ternary": "error",
     "new-parens": "error",
     "newline-per-chained-call": ["error", { ignoreChainWithDepth: 3 }],
     "no-array-constructor": "error",

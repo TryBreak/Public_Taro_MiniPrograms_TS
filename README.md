@@ -171,3 +171,9 @@ import curryN from "lodash/fp/curryN";
 ```
 
 > css 暂不支持`alias` , 在 app.js 中使用的样式会自动生效于全局(函数无法全局生效)
+
+## 注意事项
+
+mobx 切勿升级
+
+UI 库推荐使用 TaroUI <https://taro-ui.aotu.io/>

@@ -7,8 +7,13 @@ export { baseUrl };
 const interceptor = function(chain) {
   const requestParams = chain.requestParams;
   // const { method, data, url } = requestParams;
+  // console.log("开始请求");
+  // Taro.showLoading();
+
   return chain.proceed(requestParams).then((res) => {
     const data = res.data;
+    // console.log("结束请求");
+    // Taro.hideLoading();
     if (data.code === "OK") {
       return data;
     } else {
@@ -30,7 +35,6 @@ const request = ({ url, data = "", method }) => {
     data,
     method,
     header: {
-      "content-type": "application/x-www-form-urlencoded",
       Authorization: `Bearer ${token}`,
     },
   });

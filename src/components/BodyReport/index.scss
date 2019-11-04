@@ -1,0 +1,20 @@
+//圆形的头像
+
+.wrapper {
+  display: block;
+  width: 680px;
+  margin: 0 auto;
+  .listBox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: 310px;
+    height: 374px;
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: #f7f8f8;
+    border-radius: 24px;
+    margin: 15px;
+  }
+}

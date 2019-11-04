@@ -1,45 +1,35 @@
 import { ajax } from "@/utils/http";
 import Taro from "@tarojs/taro";
-import { setStore, removeStore, getStore } from "@/utils/utils.js";
+import { setStore } from "@/utils/utils";
 
-export const wechatCallback = (data) => {
+const requestLogin = (data) => {
   return ajax({
-    url: "/api/passport/wechatCallback",
+    url: "/api/passport/login",
     data,
-    method: "get",
+    method: "post",
   });
 };
 
 export const wx_login = (e) => {
-  const { rawData } = e.detail;
-  const userInfo = JSON.parse(rawData);
+  const detail = e.detail;
+  const userInfo = detail.userInfo;
   return new Promise((resolve, reject) => {
-    Taro.login().then((res) => {
-      const registerWayId = getStore("registerWayId");
-      const jsCode = res.code;
-      const nickName = userInfo.nickName;
+    Taro.login().then((login) => {
+      setStore("userInfo", userInfo);
       const avatar = userInfo.avatarUrl;
-      wechatCallback({
+      const nickName = userInfo.nickName;
+      const jsCode = login.code;
+      requestLogin({
+        avatar,
         jsCode,
         nickName,
-        avatar,
-        registerWayId,
-      }).then((data) => {
-        if (data.data) {
-          setStore("userToken", data.data);
-          setStore("userInfo", {
-            nickName,
-            avatar,
-          });
-          resolve({
-            token: data.data,
-            nickName,
-            avatar,
-          });
+      }).then((res: any) => {
+        if (res.code === "OK") {
+          //在这里存储Token
+          setStore("userToken", res.data.token);
+          resolve(res);
         } else {
-          removeStore("userToken");
-          removeStore("userInfo");
-          reject(new Error("Token 返回不正确!"));
+          reject(res);
         }
       });
     });

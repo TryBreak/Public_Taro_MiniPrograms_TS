@@ -115,3 +115,11 @@ export const fs_overflow = (str, num) => {
     return "";
   }
 };
+
+export const clearUserInfo = () => {
+  const nowTime = new Date().getTime();
+  console.info("清除了用户存储");
+  removeStore("userInfo");
+  removeStore("userToken");
+  setStore("getUserInfo_time", nowTime);
+};
