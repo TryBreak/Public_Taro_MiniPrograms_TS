@@ -7,13 +7,10 @@
 ## 运行方式
 
 ```bash
-#安装本地工具
+#安装本地工具 , 请确保工具最新
 npm install -g @tarojs/cli
 
-#升级本地工具
-taro update self
-
-#升级依赖
+#升级依赖 , 要确定npm package的版本与 taro 保持一致 , 踩坑的经验
 taro update project
 
 #安装本地包
